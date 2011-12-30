@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <title>Anne &amp; Young</title>
+  <script type='text/javascript' src='jquery-1.4.4.min.js'></script>
+  <script type='text/javascript' src='jquery.scrollTo-min.js'></script>
+  <script type='text/javascript'>
+  $(function() {
+    // Set active section as user scrolls.
+    var scrolling = false;
+    var scrollActive = function() {
+      if (scrolling) return false;
+
+      var scroll = $(this).scrollTop();
+      $('.navigation a').removeClass('active');
+      var breaks = [710, 900, 960, 1380, 1460, 1580, 9999];
+      for (var i = 0; i < breaks.length; i++) {
+        if (scroll < breaks[i]) {
+          $('.navigation a:eq('+ i +')').addClass('active');
+          break;
+        }
+      }
+    };
+    $(document).scroll(scrollActive);
+    scrollActive();
+
+    // Set active section, and scroll to it when a navigation link
+    // is clicked.
+    $('.navigation a').click(function() {
+      scrolling = true;
+      var target = $(this).attr('href').split('#')[1];
+      $.scrollTo($('#' + target), 500, function() {
+        scrolling = false;
+      });
+      $('.navigation a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+    });
+  });
+  </script>
+  <link rel='stylesheet' href='reset.css' type='text/css'/>
+  <link rel='stylesheet' href='style.css' type='text/css'/>
+</head>
+<body>
+<div class='navigation'>
+  <a href='#invitation'>Top</a>
+  <a href='#schedule'>Schedule</a>
+  <a href='#todo'>Things to do</a>
+  <a href='#accommodations'>Accommodations</a>
+  <a href='#registry'>Gift registry</a>
+  <a href='#directions'>Directions</a>
+  <a href='#contact'>Contact</a>
+</div>
+
+<div id='invitation' class='invitation'>
+  Michael and Donna Smith together with Seung Shin and Jung Ah Hahn request the pleasure of your company at the marriage of Anne Smith &amp; Youngjin Hahn Saturday the eighteenth of June two thousand eleven two o'clock in the afternoon in Syracuse, New York at the Cathedral of the Immaculate Conception. Reception to follow at the Crowne Plaza Hotel.
+</div>
+
+<div class='moleskin'>
+  <div id='schedule' class='left'>
+    <h1>Schedule</h1>
+    <h2>Saturday June 18 2011</h2>
+    <p><em>2 pm</em> &mdash; Wedding ceremony at the <a target='_blank' href='http://maps.google.com/maps/place?cid=2792562511032709128'>Cathedral of the Immaculate Conception</a>.</p>
+    <p><em>5 pm</em> &mdash; Reception. Cocktails, dinner &amp; dancing at the <a target='_blank' href='http://maps.google.com/maps/place?cid=8768338343901753963'>Crowne Plaza</a>.</p>
+    <h2>Sunday June 19 2011</h2>
+    <p><em>9 am-12 pm</em> &mdash; Brunch at the Crowne Plaza. Please join us if you can!</p>
+
+    <div class='divider'></div>
+
+    <h1 id='accommodations'>Accommodations</h1>
+    <h2>Crowne Plaza Hotel</h2>
+    <p>We have a room block reserved at the Crowne Plaza. The special room rate for our guests is <em>$129 per night including breakfast</em> for each guest. You will receive the rate if you make your reservation by <em>May 18</em>.</p>
+    <p>To reserve your room call the hotel directly at <em>(315) 479-7000</em> or <em>(800) 227-6963</em> and mention the <em>Smith/Hahn wedding</em>. We strongly recommend making your reservation as soon as you know your plans &mdash; the hotel has a limited number of doubles and we want you to get the room of your choice.</p>
+  </div>
+  <div id='todo' class='right'>
+    <div class='thumbs clearfix'>
+      <span class='thumb wegmans'>Wegmans</span>
+      <span class='thumb stronghearts'>StrongHearts</span>
+      <span class='thumb dinosaurbbq last'>Dinosaur BBQ</span>
+      <span class='thumb armorysquare'>Armory Square</span>
+      <span class='thumb bridges'>Bridges</span>
+      <span class='thumb greenlakes last'>Green Lakes</span>
+    </div>
+    <h1>Things to do in <em>Syracuse, NY</em></h1>
+    <h2>Do</h2>
+    <ul>
+      <li>Explore <a target='_blank' href='http://maps.google.com/maps/place?cid=3405343483466954305'>Armory Square</a></li>
+      <li>Shop at <a target='_blank' href='http://maps.google.com/maps/place?cid=4932481265025992315'>Carousel Mall</a></li>
+      <li>Learn at the <a target='_blank' href='http://maps.google.com/maps/place?cid=13318483916794948339'>MOST</a></li>
+      <li>Relax at <a target='_blank' href='http://maps.google.com/maps/place?cid=2246818993339978985'>Thornden Park and Rose Garden</a></li>
+      <li>Golf and Hike at <a target='_blank' href='http://maps.google.com/maps/place?cid=2048549156781711171'>Green Lakes</a></li>
+      <li>Art at the <a target='_blank' href='http://maps.google.com/maps/place?cid=611637137502750014'>Szozda Gallery</a> and the <a target='_blank' href='http://maps.google.com/maps/place?cid=17149662054099463405'>Everson Museum</a></li>
+      <li>Theatre at <a target='_blank' href='http://maps.google.com/maps/place?cid=1565186273840693936'>Syracuse Stage</a></li>
+      <li>Tea at <a target='_blank' href='http://maps.google.com/maps/place?cid=9525132295630255129'>Roji</a></li>
+    </ul>
+    <h2>Eat</h2>
+    <ul>
+      <li>Casual &mdash;
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=15017785964207756163'>All Night Egg Plant</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=692990932331139245'>Asti's Cafe</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=16732179357257500888'>Blue Tusk Pub</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=400073978327753445'>Dinosaur BBQ</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=14219545126300974523'>StrongHearts</a> (vegan),
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=2805274583056997978'>Wegmans</a>
+      </li>
+      <li>Upscale &mdash;
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=15142023691655951979'>BC</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=8274517294007038275'>Lemongrass</a>,
+        <a target='_blank' href='http://maps.google.com/maps/place?cid=6326577916777306774'>Phoebe's</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+<div class='package'>
+  <h1 id='directions'>Directions</h1>
+  <h2>By car</h2>
+  <p>Directions from the
+    <a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=I-90+E&daddr=Crowne+Plaza+Syracuse,+701+East+Genesee+Street,+Syracuse,+NY+13210&geocode=FQyskAIdpP9g-w%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&hl=en&mra=dme&mrsp=0&sz=8&sll=42.4802,-75.811157&sspn=2.369888,4.619751&ie=UTF8&ll=42.918218,-76.102295&spn=1.176644,2.309875&z=9'>west</a> (I90E),
+    <a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=I-90+W&daddr=Crowne+Plaza+Syracuse,+701+East+Genesee+Street,+Syracuse,+NY+13210&geocode=FUAxjAIdBCyY-w%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&hl=en&mra=dme&mrsp=0&sz=8&sll=42.195969,-73.471069&sspn=2.380621,4.619751&ie=UTF8&ll=42.455888,-76.05835&spn=2.370808,4.619751&z=8'>east</a> (I90W),
+    and
+    <a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=I-81+N&daddr=Crowne+Plaza+Syracuse,+701+East+Genesee+Street,+Syracuse,+NY+13210&geocode=FRBKhQIdSH95-w%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&hl=en&mra=dme&mrsp=0&sz=7&sll=42.350425,-74.278564&sspn=4.749264,9.239502&ie=UTF8&ll=42.350425,-75.06958&spn=2.374795,4.619751&z=8'>south</a> (81N)
+    on Google Maps.</p>
+  <h2>By air</h2>
+  <p>Fly in to <a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=1000+Colonel+Eileen+Collins+Boulevard,+Syracuse,+New+York+13212+(Syracuse+Hancock+International+Airport)&daddr=Crowne+Plaza+Syracuse,+701+East+Genesee+Street,+Syracuse,+NY+13210&hl=en&geocode=FYfdkQIdr6d2-yEnaIZPmQo-pw%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&mra=ls&sll=43.11386,-76.109912&sspn=0.009163,0.018046&ie=UTF8&z=12'>Syracuse Hancock Airport</a>. A free shuttle runs between the airport and the Crowne Plaza &mdash; you can call the shuttle from the hotel desk near Baggage Claim.</p>
+  <h2>By bus/train</h2>
+  <p>Buses and trains stop at the <a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=Syracuse+Regional+Transportation+Center&daddr=Crowne+Plaza+Syracuse,+701+East+Genesee+Street,+Syracuse,+NY+13210&hl=en&geocode=FcRLkQId5L91-yl3wT7xJPLZiTFFz1uEA0gE4A%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&mra=ls&sll=43.08146,-76.14262&sspn=0.146693,0.288734&ie=UTF8&z=14'>Syracuse Regional Transportation Center</a>. It is a short car ride away from the Crowne Plaza.</p>
+  <h2>The day of</h2>
+  <p><a target='_blank' href='http://maps.google.com/maps?f=d&source=s_d&saddr=Crowne+Plaza+Hotel+Syracuse&daddr=Cathedral+of+the+Immaculate+Conception,+Syracuse+to:43.0470267,-76.149136+to:Crowne+Plaza+Hotel+Syracuse&hl=en&geocode=FQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q%3BFcnVkAIdXQx2-yEIcC3jzizBJikxtyejvvPZiTGJSYFLV3WwGQ%3BFXLYkAIdcA52-ykBKK0AvPPZiTFfj7_FvYladw%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&mra=dpe&mrsp=2&sz=17&via=2&sll=43.04717,-76.14649&sspn=0.003991,0.009538&ie=UTF8&t=h&z=17'>Directions</a> between the hotel and the cathedral and <a target='_blank' href='http://maps.google.com/maps/ms?source=s_d&saddr=Crowne+Plaza+Hotel+Syracuse&daddr=Cathedral+of+the+Immaculate+Conception,+Syracuse+to:43.0470267,-76.149136+to:Crowne+Plaza+Hotel+Syracuse&hl=en&geocode=FQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q%3BFcnVkAIdXQx2-yEIcC3jzizBJikxtyejvvPZiTGJSYFLV3WwGQ%3BFXLYkAIdcA52-ykBKK0AvPPZiTFfj7_FvYladw%3BFQDakAIdrSl2-yFrcrNiRGWveSmLwjDrpPPZiTE6saYZgpDg1Q&mra=dpe&mrsp=2&sz=17&via=2&ie=UTF8&t=h&doflg=ptm&msa=0&msid=216931712593566658598.0004a3d3fe8882f7386e0&ll=43.046758,-76.146401&spn=0.004406,0.009109&z=17'>parking info</a>. </p>
+
+  <div id='registry' class='registry'>
+    <h2>Gift registry</h2>
+    We have a registry at <a target='_blank' href='http://www.amazon.com/gp/registry/wedding/2BJLCPH02RZGR'>Amazon</a> and <a target='_blank' href='http://www1.macys.com/registry/wedding/guest/?registryId=463476'>Macy's</a>. Have gifts shipped if you would like to travel a little lighter.
+    <a class='button registryAmazon' href='http://www.amazon.com/gp/registry/wedding/2BJLCPH02RZGR'>Amazon</a>
+    <a class='button registryMacys' href='http://www1.macys.com/registry/wedding/guest/?registryId=463476'>Macy's</a>
+  </div>
+</div>
+
+<div id='contact' class='contact'>
+  Have questions? Don't hesitate to<br/>
+  contact us at <a href='mailto:anneandyoung@gmail.com'>anneandyoung@gmail.com</a>.
+</div>
+
+</body>
+</html>

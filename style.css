@@ -1,0 +1,231 @@
+@font-face {
+  font-family:Calluna;
+  src:url('CallunaRegular.otf');
+  }
+
+body {
+  font:15px/20px Calluna,Georgia,serif;
+  color:#432;
+  background:url(bg.jpg) 50% 0% repeat;
+  margin:0px;
+  padding:0px;
+  }
+
+a {
+  color:#467;
+  text-decoration:none;
+  }
+
+a:hover { text-decoration:underline; }
+
+.navigation {
+  position:fixed;
+  left:0px;
+  top:20px;
+  z-index:1;
+  background:url(black75.png);
+  padding:5px 0px;
+  }
+
+.navigation a {
+  padding:0px 15px;
+  border:0px;
+  color:#aaa;
+  text-transform:uppercase;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  display:block;
+  }
+
+.navigation a:hover { text-decoration:none; }
+
+.navigation a.active {
+  color:#fff;
+  background:url(black75.png);s
+  }
+
+.invitation {
+  text-indent:-9999px;
+  overflow:hidden;
+  background:url(design.jpg) 50% 0px no-repeat;
+  height:710px;
+  width:960px;
+  margin:0px auto;
+  }
+
+.moleskin {
+  background:url(design.jpg) 50% -710px no-repeat;
+  height:700px;
+  width:860px;
+  padding:0px 50px;
+  margin:0px auto;
+  }
+
+.moleskin .left,
+.moleskin .right {
+  padding:40px;
+  width:350px;
+  float:left;
+  }
+
+.package {
+  color:#321;
+  background:url(design.jpg) 50% -1410px no-repeat;
+  height:410px;
+  width:410px;
+  padding:90px 280px 60px 130px;
+  margin:0px auto;
+  position:relative;
+  }
+
+.package a { color:#245; }
+
+.registry {
+  position:absolute;
+  right:0px;
+  top:0px;
+  padding:30px 30px 0px;
+  width:180px;
+  }
+
+.registryAmazon,
+.registryMacys {
+  display:block;
+  width:180px;
+  height:40px;
+
+  overflow:hidden;
+  text-indent:-9999px;
+  position:absolute;
+  top:200px;
+  left:20px;
+  }
+
+.registryMacys { top:240px; }
+
+.contact {
+  color:#ccc;
+  background:url(design.jpg) 50% -1970px no-repeat;
+  height:40px;
+  width:320px;
+  padding:70px 0px 300px;
+  font-size:13px;
+  text-align:center;
+  margin:0px auto;
+  }
+
+.contact a { color:#69b; }
+
+/**
+ * # Markdown #################################################################
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight:normal; }
+
+em {
+  font-style:normal;
+  color:#e62;
+  white-space:nowrap;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p,
+img {
+  display:block;
+  margin:0px 0px 10px;
+  }
+
+h1 {
+  font-size:24px;
+  line-height:30px;
+  }
+
+h2 {
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:1px;
+  }
+
+h3 {
+  font-size:16px;
+  }
+
+
+ul ul { margin:0px; }
+
+p,
+ul li { padding-left:20px; }
+
+
+tt,
+pre,
+code {
+  font:normal 12px/20px 'Andale Mono',Monaco,Consolas,'Lucida Console',monospace;
+  margin:0px;
+  padding:0px;
+  }
+
+pre,
+code {
+  color:#888;
+  background:#f8f8f8;
+  }
+
+pre {
+  padding:9px;
+  margin:10px 0px;
+  border:1px solid #eee;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  box-shadow:inset #eee 0px 1px 5px;
+  -moz-box-shadow:inset #eee 0px 1px 5px;
+  -webkit-box-shadow:inset #eee 0px 1px 5px;
+  }
+
+img {
+  box-shadow:#ddd 0px 2px 5px;
+  -moz-box-shadow:#ddd 0px 2px 5px;
+  -webkit-box-shadow:#ddd 0px 2px 5px;
+  }
+
+.divider {
+  margin:20px 20px;
+  border-top:1px solid #e0d8d0;
+  }
+
+.thumbs { margin:0px 0px 10px; }
+
+.thumb {
+  float:left;
+  width:100px;
+  height:80px;
+  border:5px solid #fff;
+  margin:0px 10px 10px 0px;
+  background:#eee url(todo.png) 100px 80px no-repeat;
+  overflow:hidden;
+  text-indent:-9999px;
+  box-shadow:rgba(0,0,0,.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,.1) 0px 1px 3px;
+  }
+
+.thumb.last { margin-right:0px; }
+
+.thumb.wegmans { background-position:0px 0px; }
+.thumb.stronghearts { background-position:-100px 0px; }
+.thumb.dinosaurbbq { background-position:-200px 0px; }
+.thumb.bridges { background-position:-300px 0px; }
+.thumb.armorysquare { background-position:-400px 0px; }
+.thumb.greenlakes { background-position:-500px 0px; }
